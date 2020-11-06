@@ -1,1 +1,571 @@
-Hello Angie
+
+rhyme@ip-172-31-253-216:~$ git config --global user.name FerCCCMoncada
+rhyme@ip-172-31-253-216:~$ git config --global user.email fernandomoncadagutirrez@hotmail.com
+rhyme@ip-172-31-253-216:~$ git clone https://github.com/Fer666Moncada/learning_git.git
+Cloning into 'learning_git'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+rhyme@ip-172-31-253-216:~$ cd learning_git/
+rhyme@ip-172-31-253-216:~/learning_git$ ls
+README.md
+rhyme@ip-172-31-253-216:~/learning_git$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+rhyme@ip-172-31-253-216:~/learning_git$ nano new.txt
+rhyme@ip-172-31-253-216:~/learning_git$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+rhyme@ip-172-31-253-216:~/learning_git$ git add new.txt
+rhyme@ip-172-31-253-216:~/learning_git$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   new.txt
+
+rhyme@ip-172-31-253-216:~/learning_git$ git commit -m "add a new file"
+[main 3054ae3] add a new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new.txt
+rhyme@ip-172-31-253-216:~/learning_git$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+rhyme@ip-172-31-253-216:~/learning_git$ git push
+Username for 'https://github.com': Fer666Moncada           
+Password for 'https://Fer666Moncada@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Fer666Moncada/learning_git.git
+   ac4679f..3054ae3  main -> main
+rhyme@ip-172-31-253-216:~/learning_git$ mkdir Folder2
+rhyme@ip-172-31-253-216:~/learning_git$ git clone https://github.com/Fer666Moncada/learning_git.git
+Cloning into 'learning_git'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+rhyme@ip-172-31-253-216:~/learning_git$ cd Folder2/
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ git clone https://github.com/Fer666Moncada/learning_git.git
+Cloning into 'learning_git'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ git add new33.txt
+fatal: pathspec 'new33.txt' did not match any files
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ nano new33.txt
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	./
+	../learning_git/
+
+nothing added to commit but untracked files present (use "git add" to track)
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ git add new33.txt
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ git commit -m "second file"
+[main 004fc12] second file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Folder2/new33.txt
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ git push
+Username for 'https://github.com': Fer666Moncada
+Password for 'https://Fer666Moncada@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 392 bytes | 392.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Fer666Moncada/learning_git.git
+   3054ae3..004fc12  main -> main
+rhyme@ip-172-31-253-216:~/learning_git/Folder2$ cd ..
+rhyme@ip-172-31-253-216:~/learning_git$ ls
+Folder2  README.md  learning_git  new.txt
+rhyme@ip-172-31-253-216:~/learning_git$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Folder2/learning_git/
+	learning_git/
+
+nothing added to commit but untracked files present (use "git add" to track)
+rhyme@ip-172-31-253-216:~/learning_git$ cd learning_git/
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ ls
+README.md  new.txt
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/Fer666Moncada/learning_git
+   3054ae3..004fc12  main       -> origin/main
+Updating 3054ae3..004fc12
+Fast-forward
+ Folder2/new33.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Folder2/new33.txt
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ ls
+Folder2  README.md  new.txt
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ cd Folder2/
+rhyme@ip-172-31-253-216:~/learning_git/learning_git/Folder2$ ls
+new33.txt
+rhyme@ip-172-31-253-216:~/learning_git/learning_git/Folder2$ git log
+commit 004fc124d0743214a9edbf0dc4116e5258f2ed11 (HEAD -> main, origin/main, origin/HEAD)
+Author: FerCCCMoncada <fernandomoncadagutirrez@hotmail.com>
+Date:   Fri Nov 6 04:05:34 2020 +0000
+
+    second file
+
+commit 3054ae3018dcea57d0ceb75df5b3ed82b4c387e6
+Author: FerCCCMoncada <fernandomoncadagutirrez@hotmail.com>
+Date:   Fri Nov 6 03:56:28 2020 +0000
+
+    add a new file
+
+commit ac4679fc539b71b9a06007ddbc86c8895fb9a5c5
+Author: FerMoncada <fernandomoncadagutierrez@hotmail.com>
+Date:   Thu Nov 5 22:37:06 2020 -0500
+
+    Initial commit
+rhyme@ip-172-31-253-216:~/learning_git/learning_git/Folder2$ git checkout 3854ae
+error: pathspec '3854ae' did not match any file(s) known to git.
+rhyme@ip-172-31-253-216:~/learning_git/learning_git/Folder2$ git checkout 3054ae
+Note: checking out '3054ae'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 3054ae3 add a new file
+rhyme@ip-172-31-253-216:~/learning_git/learning_git/Folder2$ ls
+rhyme@ip-172-31-253-216:~/learning_git/learning_git/Folder2$ cd ..
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ ls
+README.md  new.txt
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git.
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ git checkout main
+Previous HEAD position was 3054ae3 add a new file
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+rhyme@ip-172-31-253-216:~/learning_git/learning_git$ cd ..
+rhyme@ip-172-31-253-216:~/learning_git$ cd ..
+rhyme@ip-172-31-253-216:~$ ls 
+Desktop  Documents  Downloads  Music  Pictures  Public  R  Templates  Videos  learning_git  snap
+rhyme@ip-172-31-253-216:~$ cd Desktop/
+rhyme@ip-172-31-253-216:~/Desktop$ ls
+chromium-browser-incognito.desktop  firefox-incognito.desktop        installjupyterlab.sh             vlc_vlc.desktop
+chromium-browser.desktop            firefox.desktop                  libreoffice-startcenter.desktop
+code.desktop                        google-chrome-incognito.desktop  rstudio.desktop
+exo-terminal-emulator.desktop       google-chrome.desktop            sublime_text.desktop
+rhyme@ip-172-31-253-216:~/Desktop$ git clone https://github.com/danlessa/cadCAD.git
+Cloning into 'cadCAD'...
+remote: Enumerating objects: 4466, done.
+remote: Total 4466 (delta 0), reused 0 (delta 0), pack-reused 4466
+Receiving objects: 100% (4466/4466), 19.24 MiB | 34.33 MiB/s, done.
+Resolving deltas: 100% (2535/2535), done.
+rhyme@ip-172-31-253-216:~/Desktop$ ls
+cadCAD                              exo-terminal-emulator.desktop    google-chrome.desktop            sublime_text.desktop
+chromium-browser-incognito.desktop  firefox-incognito.desktop        installjupyterlab.sh             vlc_vlc.desktop
+chromium-browser.desktop            firefox.desktop                  libreoffice-startcenter.desktop
+code.desktop                        google-chrome-incognito.desktop  rstudio.desktop
+rhyme@ip-172-31-253-216:~/Desktop$ cd cadCAD/
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git branch -e
+error: unknown switch `e'
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      Unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display SHA-1s
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    --list                list branch names
+    -l, --create-reflog   create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/ThreadedPool
+  remotes/origin/configuration_perf_tweak
+  remotes/origin/danlessa_devel
+  remotes/origin/danlessa_experiments
+  remotes/origin/danlessa_experiments_old
+  remotes/origin/demo-prey-pred
+  remotes/origin/demos
+  remotes/origin/diagram
+  remotes/origin/dimensions_print
+  remotes/origin/distroduce
+  remotes/origin/documentation
+  remotes/origin/master
+  remotes/origin/multiproc_fix
+  remotes/origin/mz-dead
+  remotes/origin/mz-undead
+  remotes/origin/nix-shell
+  remotes/origin/no_deepcopy
+  remotes/origin/param-sweep-multi-proc
+  remotes/origin/param-sweep-multi-threaded
+  remotes/origin/pretty_printing
+  remotes/origin/progress_bars
+  remotes/origin/randomizer
+  remotes/origin/staging
+  remotes/origin/structure
+  remotes/origin/tqdm
+  remotes/origin/tqdm_plus_tweaks
+  remotes/origin/transient_processing
+  remotes/origin/tutorials
+  remotes/origin/tweaks
+  remotes/origin/udc
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git branch
+* master
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git checkout progress_bars 
+Branch 'progress_bars' set up to track remote branch 'progress_bars' from 'origin'.
+Switched to a new branch 'progress_bars'
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ ls
+AUTHORS.txt   CONTRIBUTING.md  README.md     cadCAD       dist           requirements.txt  shell.nix    testing
+CHANGELOG.md  LICENSE.txt      ascii_art.py  default.nix  documentation  setup.py          simulations
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git log
+commit a853116554efa393276f4453bcadabea9199dc91 (HEAD -> progress_bars, origin/progress_bars)
+Author: Danilo Lessa Bernardineli <danilo.lessa@gmail.com>
+Date:   Thu Aug 20 15:54:16 2020 -0300
+
+    added pbar for init and end of the sim
+
+commit dae21bd3d84fbd8aa1dd259f8635cf4ab91c8743
+Merge: fa63f3c fdc9120
+commit a853116554efa393276f4453bcadabea9199dc91 (HEAD -> progress_bars, origin/progress_bars)
+Author: Danilo Lessa Bernardineli <danilo.lessa@gmail.com>
+Date:   Thu Aug 20 15:54:16 2020 -0300
+
+    added pbar for init and end of the sim
+
+commit dae21bd3d84fbd8aa1dd259f8635cf4ab91c8743
+Merge: fa63f3c fdc9120
+Author: Danilo Lessa Bernardineli <danilo.lessa@gmail.com>
+Date:   Mon Aug 17 10:53:14 2020 -0300
+
+    Merge branch 'staging' into progress_bars
+
+commit fdc91202d74a2b4a980c102665e07ea24e664326 (origin/staging)
+Merge: 11d171d 3434850
+Author: Danilo Lessa Bernardineli <danilo.lessa@gmail.com>
+Date:   Mon Aug 17 10:52:48 2020 -0300
+
+    merge
+
+commit fa63f3c873cb5263ed6cb8a5e20f44a6b7d8a5d3
+Author: Danilo Lessa Bernardineli <danilo.lessa@gmail.com>
+Date:   Mon Aug 17 10:48:14 2020 -0300
+
+    Progress bar for multi proc mode
+
+commit c365993d6413f897be057ac11ba237d01ba5d494
+Merge: 0982462 5b1a69c
+Author: Danilo Lessa Bernardineli <danilo.lessa@gmail.com>
+Date:   Mon Aug 17 10:41:19 2020 -0300
+
+    merge with master
+
+commit 5b1a69cc34c1437a1584d36df03757cd7a76ef9a
+Merge: 652e6ed 3434850
+Author: Joshua E. Jodesty <joshua.jodesty@gmail.com>
+Date:   Wed Aug 5 21:10:47 2020 -0400
+
+    Merge pull request #170 from cadCAD-org/staging
+    
+    0.4.18
+
+commit 3434850a47b7734dc9a0960d556ba8c6579176dc
+Author: Joshua E. Jodesty <joshua.jodesty@gmail.com>
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git log
+commit 65e150bf505468f4c1db57528ec1b4b06d9ac61c (HEAD -> master, origin/master, origin/HEAD)
+Merge: 9bc97cb 21f6969
+Author: Joshua E. Jodesty <12146206+JEJodesty@users.noreply.github.com>
+Date:   Thu Aug 20 17:30:05 2020 -0400
+
+    Merge pull request #183 from cadCAD-org/hot_fix
+    
+    Hot fix
+
+commit 21f69695dc1b650ff126271cb3f9b4ccccdd6559
+Author: Joshua E. Jodesty <joshua.jodesty@gmail.com>
+Date:   Thu Aug 20 17:07:51 2020 -0400
+
+    hot_fix: #175 & #171
+
+commit 63389d2fa97eed56523dd2a34f83ff500181925b
+Merge: 8c006b8 97ea999
+Author: Joshua E. Jodesty <joshua.jodesty@gmail.com>
+Date:   Thu Aug 20 16:58:39 2020 -0400
+
+    Merge branch 'hot_fix' of github.com:cadCAD-org/cadCAD into hot_fix
+
+commit 8c006b86daf1583b7f42dd803de06ad284564bb4
+Author: Joshua E. Jodesty <joshua.jodesty@gmail.com>
+Date:   Thu Aug 20 16:57:35 2020 -0400
+
+    hot_fix: #175
+
+commit 97ea999591593bf3d15a6a2e3b2845d6b1a3629b
+Merge: 02ccb66 9bc97cb
+Author: Joshua E. Jodesty <12146206+JEJodesty@users.noreply.github.com>
+Date:   Thu Aug 20 16:31:15 2020 -0400
+
+    Merge branch 'master' into hot_fix
+
+commit 02ccb66c2f0136d4a58419571c7369871a1f3cf7
+Author: Joshua E. Jodesty <joshua.jodesty@gmail.com>
+Date:   Thu Aug 20 16:25:10 2020 -0400
+
+    update build
+
+commit 9bc97cbe45cfb0e777bdec28d0755ad3a33c4d37
+Merge: 8646d09 a2ac1ca
+Author: Joshua E. Jodesty <12146206+JEJodesty@users.noreply.github.com>
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git checkout -b BranchFer
+Switched to a new branch 'BranchFer'
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git branch
+* BranchFer
+  master
+  progress_bars
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge master
+Already up to date.
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge progress_bars 
+Auto-merging cadCAD/engine/execution.py
+Merge made by the 'recursive' strategy.
+ cadCAD/engine/__init__.py  | 9 +++++++--
+ cadCAD/engine/execution.py | 7 ++++++-
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git branch
+* BranchFer
+  master
+  progress_bars
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge dist/
+merge: dist/ - not something we can merge
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ ls
+AUTHORS.txt   CONTRIBUTING.md  README.md     cadCAD       dist           requirements.txt  shell.nix    testing
+CHANGELOG.md  LICENSE.txt      ascii_art.py  default.nix  documentation  setup.py          simulations
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git branch 
+* BranchFer
+  master
+  progress_bars
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge master
+Already up to date.
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge progress_bars 
+Already up to date.
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge ascii_art.py
+merge: ascii_art.py - not something we can merge
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge cadCAD/
+merge: cadCAD/ - not something we can merge
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge ThreadedPool
+merge: ThreadedPool - not something we can merge
+
+Did you mean this?
+	cale/en/LC_MESSAGES/git.mo
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge tweeks
+merge: tweeks - not something we can merge
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge tweaks
+merge: tweaks - not something we can merge
+
+Did you mean this?
+	origin/udc
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge staging
+merge: staging - not something we can merge
+
+Did you mean this?
+	origin/udc
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ git merge config
+merge: config - not something we can merge
+rhyme@ip-172-31-253-216:~/Desktop/cadCAD$ cd ..
+rhyme@ip-172-31-253-216:~/Desktop$ mkdir clone
+rhyme@ip-172-31-253-216:~/Desktop$ cd clone
+rhyme@ip-172-31-253-216:~/Desktop/clone$ git clone https://github.com/Fer666Moncada/cadCAD.git
+Cloning into 'cadCAD'...
+remote: Enumerating objects: 4466, done.
+remote: Total 4466 (delta 0), reused 0 (delta 0), pack-reused 4466
+Receiving objects: 100% (4466/4466), 19.24 MiB | 34.39 MiB/s, done.
+Resolving deltas: 100% (2535/2535), done.
+rhyme@ip-172-31-253-216:~/Desktop/clone$ nano Fer.txt
+rhyme@ip-172-31-253-216:~/Desktop/clone$ git add
+fatal: not a git repository (or any of the parent directories): .git
+rhyme@ip-172-31-253-216:~/Desktop/clone$ git add Fer.txt
+fatal: not a git repository (or any of the parent directories): .git
+rhyme@ip-172-31-253-216:~/Desktop/clone$ ls
+Fer.txt  cadCAD
+rhyme@ip-172-31-253-216:~/Desktop/clone$ cd cadCAD/
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ nano Ferr.txt
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git add '
+> 
+> q
+> git add[A
+> git add '
+
+q
+git add[A[Bq
+fatal: pathspec '
+
+q
+git add[A
+git add ' did not match any files
+
+Command 'q' not found, but can be installed with:
+
+sudo snap install q                       # version 1.6.3-1, or
+sudo apt  install python-q-text-as-data 
+sudo apt  install python3-q-text-as-data
+
+See 'snap info q' for additional versions.
+
+git: 'add[A[Bq' is not a git command. See 'git --help'.
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git add Ferr.txt 
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git commit -m otra prueba
+error: pathspec 'prueba' did not match any file(s) known to git.
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git commit -m otraprueba
+[master 869f28d] otraprueba
+ 1 file changed, 2 insertions(+)
+ create mode 100644 Ferr.txt
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git push
+Username for 'https://github.com': Fer666Moncada
+Password for 'https://Fer666Moncada@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Fer666Moncada/cadCAD.git
+   65e150b..869f28d  master -> master
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git remote add upstream
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git remote add upstream https://github.com/Fer666Moncada/cadCAD.git
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git remote -v
+origin	https://github.com/Fer666Moncada/cadCAD.git (fetch)
+origin	https://github.com/Fer666Moncada/cadCAD.git (push)
+upstream	https://github.com/Fer666Moncada/cadCAD.git (fetch)
+upstream	https://github.com/Fer666Moncada/cadCAD.git (push)
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git pull upstream master
+From https://github.com/Fer666Moncada/cadCAD
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> upstream/master
+Already up to date.
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git pull
+Already up to date.
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ nano Final.txt
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ get add '
+> q
+> q
+> q
+> q
+> q
+> q
+> q
+> q
+> 
+> q
+> ^C
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ 
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git add Final.txt 
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git commit -m final
+[master 6742832] final
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Final.txt
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ git push
+Username for 'https://github.com': Fer666Moncada
+Password for 'https://Fer666Moncada@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Fer666Moncada/cadCAD.git
+   869f28d..6742832  master -> master
+rhyme@ip-172-31-253-216:~/Desktop/clone/cadCAD$ 
